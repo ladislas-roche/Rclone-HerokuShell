@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -n $RCLONE_CONFIG ]]; then
+if [[ -n $RCLONE_CONFIG_BASE_URL ]]; then
 	echo "Rclone config detected"
      mkdir /app/.config && mkdir /app/.config/rclone && curl -L $RCLONE_CONFIG >/app/.config/rclone/rclone.conf
 fi
