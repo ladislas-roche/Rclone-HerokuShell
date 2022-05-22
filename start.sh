@@ -2,7 +2,7 @@
 
 if [[ -n $RCLONE_CONFIG_BASE_URL ]]; then
 	echo "Rclone config detected"
-     mkdir /app/.config && mkdir /app/.config/rclone && curl -L $RCLONE_CONFIG >/app/.config/rclone/rclone.conf
+     mkdir /app/.config && mkdir /app/.config/rclone && wget $RCLONE_CONFIG -P /app/.config/rclone/
 fi
 
 if [[ -n $BOT_TOKEN && -n $OWNER_ID ]]; then
