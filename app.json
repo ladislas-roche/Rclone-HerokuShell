@@ -18,8 +18,8 @@
         "value": "",
         "required": true
       },
-      "RCLONE_CONFIG_BASE64": {
-        "description": "Your Rclone config encoded using Base64",
+      "RCLONE_CONFIG": {
+        "description": "Your Rclone config url",
         "required": false
       }
     },
