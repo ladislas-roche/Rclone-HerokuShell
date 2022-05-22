@@ -1,10 +1,8 @@
 #!/bin/bash
 
-if [[ -n $RCLONE_CONFIG_BASE64 ]]; then
+if [[ -n $RCLONE_CONFIG ]]; then
 	echo "Rclone config detected"
-	echo "[DRIVE]" > rclone.conf
-    mkdir -p /app/.config/rclone
-	echo "$(echo $RCLONE_CONFIG_BASE64|base64 -d)" >> /app/.config/rclone/rclone.conf
+     mkdir /usr/src/app/.config && mkdir /usr/src/app/.config/rclone && cd /usr/src/app/.config/rclone && wget $RCLONE_CONFIG
 fi
 
 if [[ -n $BOT_TOKEN && -n $OWNER_ID ]]; then
