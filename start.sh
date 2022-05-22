@@ -10,6 +10,11 @@ if [[ -n $BOT_TOKEN && -n $OWNER_ID ]]; then
 	python3 config.py
 fi
 
+if [[ -n $ACCOUNTS_FOLDER_LINK ]]; then
+	echo "accounts.zip detected"
+    wget $ACCOUNTS_FOLDER_LINK && unzip accounts.zip -d accounts && rm *.zip
+fi
+
 echo "SETUP COMPLETED"
 
 npm start
