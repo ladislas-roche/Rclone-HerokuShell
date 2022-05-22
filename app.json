@@ -25,7 +25,8 @@
       "ACCOUNTS_FOLDER_LINK": {
         "description": "enter permanent download link(maybe from index) of your accounts.zip",
         "required": false
-      },
+      }
+     },
     "buildpacks": [
       {
         "url": "heroku/nodejs"
